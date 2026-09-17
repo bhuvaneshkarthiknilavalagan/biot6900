@@ -1,0 +1,6 @@
+09/17/2026
+TO DO INTERPRETATION 
+
+PART A- BioPython 1.88 is installed and working correctly.confirmed the package is intalled and its version. 
+PART B- The example DNA sequence was translated into a protein sequence ending in a stop codon. works as quick sanity check 
+PART C- Each database was queried for an information PubMed gave PMIDs for relevant papers, UniProt gave the protein name for p53, PDB gave the structure title for the p53–DNA complex, and GWAS Catalog confirmed the variant rs7412.
