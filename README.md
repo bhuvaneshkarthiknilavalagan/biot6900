@@ -21,3 +21,16 @@ RNA and protein layers are sample-matched (213 CPTAC patients: 111 tumor, 102 ma
 
 Multi-evidence ranking recovered CLPTM1L (a well-established lung cancer GWAS locus near TERT) and CYP1A1 (a tobacco-carcinogen metabolism gene) among the top-scoring targets 
 Please Refer targets_luad.csv for the full ranked list and the accompanying report for interpretation.
+
+MODULE 3 ASSIGNMENT
+# BIOT 6900 — Module 3 Assignment: Target Triage with Protein Language Models
+
+Disease: Lung Adenocarcinoma (LUAD)
+
+Input:`targets_luad.csv` (top 15 targets from Module 2)
+
+Output:`targets_luad_w3.csv` — re-ranked target list combining Module 2 multi-omics evidence with ESM C tractability priors
+
+Status: Notebook runs cleanly top to bottom (Kernel → Restart & Run All confirmed). All steps completed as planned — no blockers.
+
+Mapping: 15/15 Module 2 targets mapped to `proteome.tsv` (0 unmapped).
