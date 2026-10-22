@@ -34,3 +34,15 @@ Output:`targets_luad_w3.csv` — re-ranked target list combining Module 2 multi-
 Status: Notebook runs cleanly top to bottom (Kernel → Restart & Run All confirmed). All steps completed as planned — no blockers.
 
 Mapping: 15/15 Module 2 targets mapped to `proteome.tsv` (0 unmapped).
+
+## Module 4 — Structure-Based Druggability (LUAD)
+
+**Targets:** FGFR2 (#1 in Module 2) and CYP1A1 (#8)
+
+**Status:** Ran cleanly top to bottom, no issues after installing fpocket.
+
+**Findings:** CYP1A1 is one confident domain (pLDDT 95.5), RMSD 0.33 Å vs. experiment. FGFR2 has 5 domains with an uncertain arrangement between them, but its kinase domain matched experiment well (RMSD 0.65 Å). Both targets produced one strong, confidence-backed pocket, and both matched real bound-ligand sites almost perfectly (100% and ~94% coverage).
+
+**Call for both:** Structure supports a small-molecule pocket.
+
+**Key inference:** FGFR2's second-best pocket by raw geometry got rejected for low confidence, real proof that confidence checks catch misleading pockets geometry alone would miss.
