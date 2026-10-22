@@ -46,3 +46,17 @@ Mapping: 15/15 Module 2 targets mapped to `proteome.tsv` (0 unmapped).
 **Call for both:** Structure supports a small-molecule pocket.
 
 **Key inference:** FGFR2's second-best pocket by raw geometry got rejected for low confidence, real proof that confidence checks catch misleading pockets geometry alone would miss.
+
+## Module 5 — Variant Interpretation on CYP2C9
+
+**Gene:** CYP2C9 (warfarin pharmacokinetic gene)
+
+**Status:** Notebook runs cleanly top to bottom. AlphaGenome Atlas ran live (36 variants scored); API key has been removed from the notebook and is not committed.
+
+**Fetch:** 41 variants, both anchor alleles (\*2, \*3) found. Frequency filter MAX_AF = 0.10, justified since both anchors sit at 4.9% and 8.8%, well above rare-disease thresholds.
+
+**Calibration:** Attempted on CADD but disclosed as unreliable, only 8 labelled variants, likelihood ratios ran backwards. 
+
+**Atlas:** AlphaGenome setup completed successfully (key configured, package installed, live query run). 
+
+**Major finding:** CYP2C9 has excellent missense and anchor-allele coverage but too few labelled ClinVar variants to meaningfully calibrate any predictor, a clear example that data coverage and statistical power are not the same thing.
