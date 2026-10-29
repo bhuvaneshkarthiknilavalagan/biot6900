@@ -1,6 +1,7 @@
 .env
 
 structures/
+modules/module5/data/
 .ipynb_checkpoints/
 .DS_Store
 __pycache__/

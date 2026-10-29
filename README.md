@@ -48,7 +48,7 @@ Mapping: 15/15 Module 2 targets mapped to `proteome.tsv` (0 unmapped).
 
 **Gene:** CYP2C9 (warfarin pharmacokinetic gene)
 
-**Status:** Notebook runs cleanly top to bottom. AlphaGenome Atlas ran live (36 variants scored); API key has been removed from the notebook and is not committed.
+**Status:** Notebook runs cleanly top to bottom. AlphaGenome Atlas ran live (36 variants scored); the re-run loads those cached results, so no API key is needed and none is committed. Atlas results are joined on rsID, so the few variants without one get no Atlas score.
 
 **Fetch:** 41 variants, both anchor alleles (\*2, \*3) found. Frequency filter MAX_AF = 0.10, justified since both anchors sit at 4.9% and 8.8%, well above rare-disease thresholds.
 
