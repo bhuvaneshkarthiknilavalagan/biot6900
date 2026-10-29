@@ -57,3 +57,9 @@ Mapping: 15/15 Module 2 targets mapped to `proteome.tsv` (0 unmapped).
 **Atlas:** AlphaGenome setup completed successfully (key configured, package installed, live query run). 
 
 **Major finding:** CYP2C9 has excellent missense and anchor-allele coverage but too few labelled ClinVar variants to meaningfully calibrate any predictor, a clear example that data coverage and statistical power are not the same thing.
+
+## Module 6 — PRS Portability on Real Data
+
+**Score:** PGS Catalog PGS000334 (Alzheimer's, 22 SNPs incl. APOE) applied to 1000 Genomes phase 3 genotypes (2,336 people, 5 ancestry groups). Data from the course `data.zip` (open). The phenotype is simulated.
+
+**Status:** Notebook runs cleanly top to bottom on real data (`USE_DEMO = False`). 22/22 variants used, 13 flipped, 0 dropped. Figures in `modules/module6/figures/`. No issues.
