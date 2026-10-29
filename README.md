@@ -6,21 +6,18 @@ MODULE 1 ASSIGNMENT
 Everything worked as expected during setup or running this project. The only issue was with Git authentication using a password, which no longer works with GitHub, this was resolved by switching to SSH authentication instead.
 
 MODULE 2 ASSIGNMENT
-# BIOT 6900 — Assignment 2: Independent Multi-Omics Target Discovery
+## BIOT 6900 — Assignment 2: Independent Multi-Omics Target Discovery
 
 Disease: Lung Adenocarcinoma (LUAD)
 
-# layers
-TRANSCRIPTOMICS - CPTAC (via `cptac` Python package, source: bcm) | Open | https://github.com/PayneLab/cptac 
-Proteomics | CPTAC (via `cptac` Python package, source: umich) | Open | https://github.com/PayneLab/cptac 
-Genomics | GWAS Catalog | Open | https://www.ebi.ac.uk/gwas/
+Data layers:
+- Transcriptomics | CPTAC LUAD (`cptac` package, source: bcm) | Open | https://github.com/PayneLab/cptac
+- Proteomics | CPTAC LUAD (`cptac` package, source: umich) | Open | https://github.com/PayneLab/cptac
+- Genomics | GWAS Catalog, lung adenocarcinoma (MONDO_0005061) | Open | https://www.ebi.ac.uk/gwas/
 
-Pipeline: harmonize on gene symbol → sign-agreement concordance → equal-weighted multi-evidence score → rank → export to `targets_luad.csv`.
+RNA and protein are sample-matched (213 CPTAC samples: 111 tumor, 102 normal). GWAS is from independent cohorts, so the integration is gene-level. 154 genes survived the join; the top 15 are in `targets_luad.csv` (all 154 in `targets_luad_all.csv`). See the report for interpretation.
 
-RNA and protein layers are sample-matched (213 CPTAC patients: 111 tumor, 102 matched-normal, split via `.N` sample ID suffix in patient IDs). GWAS layer is from independent case-control cohorts, so overall three-layer integration is gene-level/unmatched — the same integration category as the course's Alzheimer's exercise.
-
-Multi-evidence ranking recovered CLPTM1L (a well-established lung cancer GWAS locus near TERT) and CYP1A1 (a tobacco-carcinogen metabolism gene) among the top-scoring targets 
-Please Refer targets_luad.csv for the full ranked list and the accompanying report for interpretation.
+What did not work: the GWAS mapped genes came as pairs (e.g. `GENE1 - GENE2`) and had to be split before joining. Some GWAS hits came from cross-cancer studies rather than LUAD-specific ones, which is flagged in the notebook (Part D) and the report.
 
 MODULE 3 ASSIGNMENT
 # BIOT 6900 — Module 3 Assignment: Target Triage with Protein Language Models
