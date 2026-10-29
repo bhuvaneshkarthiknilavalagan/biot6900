@@ -28,7 +28,7 @@ Input:`targets_luad.csv` (top 15 targets from Module 2)
 
 Output:`targets_luad_w3.csv` — re-ranked target list combining Module 2 multi-omics evidence with ESM C tractability priors
 
-Status: Notebook runs cleanly top to bottom (Kernel → Restart & Run All confirmed). All steps completed as planned — no blockers.
+Status: Notebook runs cleanly top to bottom (Kernel → Restart & Run All confirmed). Only issue: after reorganizing the repo, the notebook's paths had to be updated to read the data pack from `shared/Data/BIOT6900_Module3_DataPack` and the targets from `modules/module2/targets_luad.csv`.
 
 Mapping: 15/15 Module 2 targets mapped to `proteome.tsv` (0 unmapped).
 
