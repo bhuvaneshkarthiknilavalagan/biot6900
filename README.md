@@ -63,3 +63,13 @@ Mapping: 15/15 Module 2 targets mapped to `proteome.tsv` (0 unmapped).
 **Score:** PGS Catalog PGS000334 (Alzheimer's, 22 SNPs incl. APOE) applied to 1000 Genomes phase 3 genotypes (2,336 people, 5 ancestry groups). Data from the course `data.zip` (open). The phenotype is simulated.
 
 **Status:** Notebook runs cleanly top to bottom on real data (`USE_DEMO = False`). 22/22 variants used, 13 flipped, 0 dropped. Figures in `modules/module6/figures/`. No issues.
+
+## Module 7 — Knowledge Graph (LUAD, Neo4j)
+
+**Disease:** Lung adenocarcinoma (LUAD)
+
+**Status:** Notebook runs top to bottom on Neo4j AuraDB Free. Graph has 44 nodes (19 genes, 6 drugs, 6 variants, 6 pathways, 5 phenotypes, 2 diseases) and 51 relationships. Genes come from my Module 2 top 15 (`data/targets_luad.csv`) plus EGFR, KRAS and ALK as drug-target genes. Related disease: idiopathic pulmonary fibrosis. Outputs: `my_knowledge_graph.png`, `nodes.csv`, `edges.csv`.
+
+**Credentials:** kept in `modules/module7/.env` (git-ignored, see `.env.example`).
+
+**What didn't work:** My Module 5 variants were CYP2C9 (warfarin) and have no link to LUAD, so I used LUAD GWAS lead SNPs and EGFR L858R instead. MyGene gave an alternate Ensembl id for CLPTM1L, fixed by hand. The starter's node count query only showed the shared `Entity` label, so I changed it to count each node type. No patient layer.

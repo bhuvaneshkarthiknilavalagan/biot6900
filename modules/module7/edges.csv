@@ -1,0 +1,52 @@
+src,rel,dst,pvalue,source,confidence
+FGFR2,ASSOCIATED_WITH,Lung adenocarcinoma,8e-35,GWAS,high
+KRT8,ASSOCIATED_WITH,Lung adenocarcinoma,2e-15,GWAS,high
+USHBP1,ASSOCIATED_WITH,Lung adenocarcinoma,2e-09,GWAS,high
+GIPC2,ASSOCIATED_WITH,Lung adenocarcinoma,4e-08,GWAS,high
+CLPTM1L,ASSOCIATED_WITH,Lung adenocarcinoma,1.0000000000000001e-28,GWAS,high
+BRCA2,ASSOCIATED_WITH,Lung adenocarcinoma,8e-12,GWAS,high
+DNAJB4,ASSOCIATED_WITH,Lung adenocarcinoma,4e-08,GWAS,high
+CYP1A1,ASSOCIATED_WITH,Lung adenocarcinoma,5e-07,GWAS,medium
+PALM,ASSOCIATED_WITH,Lung adenocarcinoma,3e-09,GWAS,high
+EPHX2,ASSOCIATED_WITH,Lung adenocarcinoma,6e-12,GWAS,high
+FRY,ASSOCIATED_WITH,Lung adenocarcinoma,4e-09,GWAS,high
+SLC12A7,ASSOCIATED_WITH,Lung adenocarcinoma,1e-07,GWAS,medium
+VWF,ASSOCIATED_WITH,Lung adenocarcinoma,3e-06,GWAS,medium
+ADAMTS7,ASSOCIATED_WITH,Lung adenocarcinoma,4e-15,GWAS,high
+FADS2,ASSOCIATED_WITH,Lung adenocarcinoma,2e-14,GWAS,high
+EGFR,ASSOCIATED_WITH,Lung adenocarcinoma,,clinical driver,high
+KRAS,ASSOCIATED_WITH,Lung adenocarcinoma,,clinical driver,high
+ALK,ASSOCIATED_WITH,Lung adenocarcinoma,,clinical driver,high
+Lung adenocarcinoma,HAS_PHENOTYPE,Cough,,HPO,high
+Lung adenocarcinoma,HAS_PHENOTYPE,Dyspnea,,HPO,high
+Lung adenocarcinoma,HAS_PHENOTYPE,Hemoptysis,,HPO,high
+Lung adenocarcinoma,HAS_PHENOTYPE,Pleural effusion,,HPO,high
+Lung adenocarcinoma,HAS_PHENOTYPE,Weight loss,,HPO,high
+FGFR2,PARTICIPATES_IN,RTK / MAPK signaling,,Reactome,high
+EGFR,PARTICIPATES_IN,RTK / MAPK signaling,,Reactome,high
+KRAS,PARTICIPATES_IN,RTK / MAPK signaling,,Reactome,high
+ALK,PARTICIPATES_IN,RTK / MAPK signaling,,Reactome,high
+BRCA2,PARTICIPATES_IN,DNA repair,,Reactome,high
+CYP1A1,PARTICIPATES_IN,Xenobiotic metabolism,,Reactome,high
+EPHX2,PARTICIPATES_IN,Xenobiotic metabolism,,Reactome,high
+FADS2,PARTICIPATES_IN,Fatty acid metabolism,,Reactome,high
+EPHX2,PARTICIPATES_IN,Fatty acid metabolism,,Reactome,high
+KRT8,PARTICIPATES_IN,Keratinization,,Reactome,high
+VWF,PARTICIPATES_IN,Hemostasis,,Reactome,high
+ADAMTS7,PARTICIPATES_IN,Hemostasis,,Reactome,high
+Osimertinib,TARGETS,EGFR,,ChEMBL,high
+Gefitinib,TARGETS,EGFR,,ChEMBL,high
+Sotorasib,TARGETS,KRAS,,ChEMBL,high
+Alectinib,TARGETS,ALK,,ChEMBL,high
+Erdafitinib,TARGETS,FGFR2,,ChEMBL,high
+Nintedanib,TARGETS,FGFR2,,ChEMBL,high
+rs11200014,OCCURS_IN,FGFR2,,GWAS Catalog,high
+rs6554758,OCCURS_IN,CLPTM1L,,GWAS Catalog,high
+rs174559,OCCURS_IN,FADS2,,GWAS Catalog,high
+rs11571833,OCCURS_IN,BRCA2,,GWAS Catalog,high
+rs76354137,OCCURS_IN,CYP1A1,,GWAS Catalog,high
+rs121434568,OCCURS_IN,EGFR,,GWAS Catalog,high
+Idiopathic pulmonary fibrosis,HAS_PHENOTYPE,Cough,,HPO,high
+Idiopathic pulmonary fibrosis,HAS_PHENOTYPE,Dyspnea,,HPO,high
+PDGFRB,ASSOCIATED_WITH,Idiopathic pulmonary fibrosis,,literature,medium
+Nintedanib,TARGETS,PDGFRB,,ChEMBL,high
