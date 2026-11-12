@@ -73,3 +73,26 @@ Mapping: 15/15 Module 2 targets mapped to `proteome.tsv` (0 unmapped).
 **Credentials:** kept in `modules/module7/.env` (git-ignored, see `.env.example`).
 
 **What didn't work:** My Module 5 variants were CYP2C9 (warfarin) and have no link to LUAD, so I used LUAD GWAS lead SNPs and EGFR L858R instead. MyGene gave an alternate Ensembl id for CLPTM1L, fixed by hand. The starter's node count query only showed the shared `Entity` label, so I changed it to count each node type. No patient layer.
+
+# Module 9 — Clinical NLP on Lung Adenocarcinoma
+
+**Name:** Bhuvanesh Karthik Nilavalagan
+**Disease:** Lung adenocarcinoma
+**Seed:** 2054404 (student ID 002054404)
+
+**Configuration**
+- Signals: malignant_effusion, hypoxia, cachexia
+- Consequences (declared leakage): thoracentesis, intubation, comfort_care
+- Hidden leak caught: renal_replacement
+
+**Results**
+- Cohort: 400 synthetic patients, 22% mortality
+- Naive vs assertion-aware extraction (malignant_effusion): 189 vs 111
+- AUROC: 0.949 all features → 0.802 declared leakage removed → 0.693 all leakage removed
+
+**Things I noticed**
+- comfort_care only scored 0.009 even though it is obvious leakage. I think the leakage features overlap too much, since patients who get comfort care have usually been intubated too.
+- Both injected wildcards are sepsis concepts. Lactate clearance and dialysis have nothing to do with lung cancer, so the generator seems to add the same two regardless of the disease you configure.
+- lactate_not_clearing came out at −0.002, the lowest of anything. I expected it to leak but left it in since removing it would change nothing.
+
+
