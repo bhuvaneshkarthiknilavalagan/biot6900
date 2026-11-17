@@ -58,6 +58,7 @@ Mapping: 15/15 Module 2 targets mapped to `proteome.tsv` (0 unmapped).
 
 **Major finding:** CYP2C9 has excellent missense and anchor-allele coverage but too few labelled ClinVar variants to meaningfully calibrate any predictor, a clear example that data coverage and statistical power are not the same thing.
 
+
 ## Module 6 — PRS Portability on Real Data
 
 **Score:** PGS Catalog PGS000334 (Alzheimer's, 22 SNPs incl. APOE) applied to 1000 Genomes phase 3 genotypes (2,336 people, 5 ancestry groups). Data from the course `data.zip` (open). The phenotype is simulated.
@@ -94,5 +95,28 @@ Mapping: 15/15 Module 2 targets mapped to `proteome.tsv` (0 unmapped).
 - comfort_care only scored 0.009 even though it is obvious leakage. I think the leakage features overlap too much, since patients who get comfort care have usually been intubated too.
 - Both injected wildcards are sepsis concepts. Lactate clearance and dialysis have nothing to do with lung cancer, so the generator seems to add the same two regardless of the disease you configure.
 - lactate_not_clearing came out at −0.002, the lowest of anything. I expected it to leak but left it in since removing it would change nothing.
+
+# Module 8 — Single-Cell & Spatial Omics
+
+**Name:** Bhuvanesh Karthik Nilavalagan
+**Target gene:** EPCAM
+**Disease:** Breast cancer (both datasets provided)
+
+status everything runs from top to bottom cleanly - all todo cells completed 
+
+**Part 1 — Single-cell**
+10 donors pulled from the CZ CELLxGENE Census, 18,388 cells after QC. Ran scVI and Harmony, compared both against no integration using batch and biology silhouettes. Went with scVI: it preserves biology better (0.034 vs Harmony's 0.007), though Harmony mixes donors better (−0.087 vs −0.025). EPCAM came out almost entirely in the Epithelial/Tumour compartment, 29% of those cells versus 0–8% everywhere else.
+
+**Part 2 — Spatial**
+10x breast cancer Visium section, 3,798 spots. Nine spatial domains, Moran's I, and neighborhood enrichment all computed. EPCAM reads as a tumour core gene. Worth noting in the Moran's I list — IGHG3, IGLC2 and IGKC are all in the top eight, so there are spatially clustered plasma cells even though no immune domain separated out at resolution 0.6.
+
+**What I struggled with**
+
+Most of my time went on environment problems rather than analysis. `highly_variable_genes` with `flavor="seurat_v3"` crashed on a loess convergence error, which took a while to understand since the message points at the fitting routine rather than the data. Switching to the default flavor on log-normalised data fixed it and keeps the batch-aware step.
+
+
+Smaller things: the starter references `cell_type_broad` in the plotting cells but never creates it, so I added it from the Census `cell_type` column.
+
+ And scVI ran on CPU rather than GPU, 60 epochs instead of 200, so the integration is probably weaker than it should be.
 
 

@@ -11,3 +11,4 @@ shared/Data/GSE2034_expression.tsv
 shared/Data/*.npy
 shared/Data/proteome.tsv
 shared/Data/BIOT6900_Module3_DataPack/
+modules/module8/data/
